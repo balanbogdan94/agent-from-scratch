@@ -2,41 +2,9 @@
   "messages": [
     {
       "role": "user",
-      "content": "What is the average temperature in my city in April ?",
-      "id": "f3fbd707-f5e6-4905-b6a9-13b803f6f3cd",
-      "createdAt": "2025-03-04T10:21:58.985Z"
-    },
-    {
-      "content": "To provide you with the average temperature in your city for April, I would need to know the name of your city. Please let me know, and I'll do my best to assist you!",
-      "refusal": null,
-      "role": "assistant",
-      "id": "18b1b71a-86fd-4e9c-a151-ad16eb8afa1f",
-      "createdAt": "2025-03-04T10:21:59.570Z"
-    },
-    {
-      "role": "user",
-      "content": "What is the average temperature in Brasov in April ?",
-      "id": "3ea64684-a35a-4c05-b62a-01fe59bc0c06",
-      "createdAt": "2025-03-04T11:34:24.106Z"
-    },
-    {
-      "role": "user",
-      "content": "What is the average temperature in Brasov in April ?",
-      "id": "147f3bcb-465d-4c3f-af55-b55b392d6ced",
-      "createdAt": "2025-03-04T11:43:47.240Z"
-    },
-    {
-      "content": "The average temperature in Brașov, Romania, during April typically ranges from about 5°C (41°F) to 15°C (59°F). However, temperatures can vary, and it's always a good idea to check a reliable weather source for the most current data. If you need more specific information or recent weather data, please let me know!",
-      "refusal": null,
-      "role": "assistant",
-      "id": "1e5c0290-f413-41eb-982d-8dd0929b17a2",
-      "createdAt": "2025-03-04T11:43:48.324Z"
-    },
-    {
-      "role": "user",
-      "content": "What is the current weather in Brasov ?",
-      "id": "e7d17131-8ce6-4a7c-ba81-d69fedc89a59",
-      "createdAt": "2025-03-04T11:45:46.462Z"
+      "content": "What is the  weather in Brasov ?",
+      "id": "e1210acb-177e-4fcc-942b-35b86122c66c",
+      "createdAt": "2025-03-04T14:35:08.325Z"
     },
     {
       "content": null,
@@ -48,12 +16,32 @@
             "arguments": "{}",
             "name": "get-weather"
           },
-          "id": "call_CKQDTtTZJIboKLvQjq7ssXUH",
+          "id": "call_JUjxaGJsh72FpDZ79STZxrYP",
           "type": "function"
         }
       ],
-      "id": "7fcb16fd-8fbb-4985-930d-7bbcc01f5d25",
-      "createdAt": "2025-03-04T11:45:46.930Z"
+      "id": "c65e9d8a-d50e-4450-ae42-dad54c81c7bb",
+      "createdAt": "2025-03-04T14:35:08.975Z"
+    },
+    {
+      "role": "tool",
+      "content": "very cold. 17deg",
+      "tool_call_id": "call_JUjxaGJsh72FpDZ79STZxrYP",
+      "id": "91cef6cb-5c73-4a30-a020-f8b61c456586",
+      "createdAt": "2025-03-04T14:35:09.011Z"
+    },
+    {
+      "role": "user",
+      "content": "What is the  weather in Brasov ?",
+      "id": "4fca0cc4-014d-4ced-94e4-b21b1f4ef5b4",
+      "createdAt": "2025-03-04T14:35:55.665Z"
+    },
+    {
+      "content": "The weather in Brașov is very cold, with a temperature of 17 degrees.",
+      "refusal": null,
+      "role": "assistant",
+      "id": "a4f39d27-3103-4870-974e-ffbb5a15cbff",
+      "createdAt": "2025-03-04T14:35:56.279Z"
     }
   ]
 }

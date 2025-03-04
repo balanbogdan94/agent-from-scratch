@@ -1,5 +1,7 @@
+import type { z } from 'zod'
 import { runLLM } from './llm'
-import { addMessage, getMessages } from './memory'
+import { addMessage, getMessages, saveToolResponse } from './memory'
+import { runTool } from './toolRunner'
 import { logMessage, showLoader } from './ui'
 
 export const runAgent = async ({
@@ -7,7 +9,7 @@ export const runAgent = async ({
   tools,
 }: {
   userMessage: string
-  tools: any[]
+  tools: { name: string; parameters: z.AnyZodObject }[]
 }) => {
   await addMessage([
     {
@@ -24,13 +26,19 @@ export const runAgent = async ({
     tools,
   })
 
+  await addMessage([response])
+  logMessage(response)
+
   if (response.tool_calls) {
-    console.log('Tool calls:', response.tool_calls)
+    const toolCall = response.tool_calls[0]
+    loader.update(`executing: ${toolCall.function.name}`)
+
+    const toolResponse = await runTool(toolCall, userMessage)
+    await saveToolResponse(toolCall.id, toolResponse)
+
+    loader.update(`executed: ${toolCall.function.name}`)
   }
 
-  await addMessage([response])
-
-  logMessage(response)
   loader.stop()
   return getMessages()
 }
