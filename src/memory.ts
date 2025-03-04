@@ -36,8 +36,8 @@ export const getMessages = async () => {
   return db.data.messages.map(removeMetadata)
 }
 
-export const addMessage = async (message: AIMessage[]) => {
+export const addMessage = async (messages: AIMessage[]) => {
   const db = await getDB()
-  db.data.messages.push(...message.map(addMetadata))
+  db.data.messages.push(...messages.map(addMetadata))
   await db.write()
 }
