@@ -12,6 +12,48 @@
       "role": "assistant",
       "id": "18b1b71a-86fd-4e9c-a151-ad16eb8afa1f",
       "createdAt": "2025-03-04T10:21:59.570Z"
+    },
+    {
+      "role": "user",
+      "content": "What is the average temperature in Brasov in April ?",
+      "id": "3ea64684-a35a-4c05-b62a-01fe59bc0c06",
+      "createdAt": "2025-03-04T11:34:24.106Z"
+    },
+    {
+      "role": "user",
+      "content": "What is the average temperature in Brasov in April ?",
+      "id": "147f3bcb-465d-4c3f-af55-b55b392d6ced",
+      "createdAt": "2025-03-04T11:43:47.240Z"
+    },
+    {
+      "content": "The average temperature in Brașov, Romania, during April typically ranges from about 5°C (41°F) to 15°C (59°F). However, temperatures can vary, and it's always a good idea to check a reliable weather source for the most current data. If you need more specific information or recent weather data, please let me know!",
+      "refusal": null,
+      "role": "assistant",
+      "id": "1e5c0290-f413-41eb-982d-8dd0929b17a2",
+      "createdAt": "2025-03-04T11:43:48.324Z"
+    },
+    {
+      "role": "user",
+      "content": "What is the current weather in Brasov ?",
+      "id": "e7d17131-8ce6-4a7c-ba81-d69fedc89a59",
+      "createdAt": "2025-03-04T11:45:46.462Z"
+    },
+    {
+      "content": null,
+      "refusal": null,
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": "{}",
+            "name": "get-weather"
+          },
+          "id": "call_CKQDTtTZJIboKLvQjq7ssXUH",
+          "type": "function"
+        }
+      ],
+      "id": "7fcb16fd-8fbb-4985-930d-7bbcc01f5d25",
+      "createdAt": "2025-03-04T11:45:46.930Z"
     }
   ]
 }
